@@ -11418,15 +11418,22 @@ header nav {
   height: 80px;
   line-height: 80px;
 }
+header nav .show {
+  display: block;
+}
 header nav ul {
   display: flex;
   justify-content: center;
 }
 @media (max-width: 575.98px) {
   header nav ul {
+    background: #C3DAB7;
     display: block;
     text-align: center;
     padding: 0;
+    background: #C3DAB7;
+    min-height: 100vh;
+    display: none;
   }
 }
 header nav ul li {
@@ -11440,6 +11447,8 @@ header nav ul li {
 @media (max-width: 575.98px) {
   header nav ul li {
     border-bottom: 1px solid #e9ecef;
+    font-weight: bold;
+    padding: 1rem 0;
   }
 }
 header nav ul li a {
@@ -11505,8 +11514,10 @@ header nav ul .shopping-cart span {
   height: 20px;
   line-height: 10px;
 }
-header nav ul .menu-bar {
-  display: none;
+@media (max-width: 575.98px) {
+  header nav ul .shopping-cart span {
+    background-color: #fff;
+  }
 }
 @media (max-width: 575.98px) {
   header nav ul .search-icon {
@@ -11515,6 +11526,60 @@ header nav ul .menu-bar {
     right: 10%;
     border-bottom: none;
   }
+}
+header nav .menu-btn {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+@media (max-width: 575.98px) {
+  header nav .menu-btn {
+    display: block;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+  }
+}
+header nav .menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0.2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+header nav .menu-btn__burger::before,
+header nav .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+header nav .menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+header nav .menu-btn__burger::after {
+  transform: translateY(16px);
+}
+header nav .menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+header nav .menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+header nav .menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
 }
 
 /*# sourceMappingURL=style.css.map */
