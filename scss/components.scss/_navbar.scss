@@ -39,7 +39,7 @@ header{
       @include media-breakpoint-down(sm){
        border-bottom: 1px solid $gray-200;
        font-weight: bold;
-       padding: 1rem 0;
+       padding: 1.5rem 0;
        
       }
      a {
@@ -68,7 +68,7 @@ header{
       @include media-breakpoint-down(sm){
        position: absolute;
        top:0;
-       left:40%;
+       left:35%;
        font-size: 3rem;
        border-bottom: 1px solid $gray-200;
        display:block;

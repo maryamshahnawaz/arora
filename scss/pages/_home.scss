@@ -1,0 +1,41 @@
+@use "../custom-styling" as *;
+.branding {
+ background-color: $primary;
+ min-height: 100vh;
+ width:100%;
+ padding: 10rem 0 0 0 ;
+ @include media-breakpoint-down(sm){
+  padding:2rem 0 0 0;
+ }
+&__images{
+ position: relative;
+ margin: 0 auto;
+ display:flex;
+ padding-top: 100px;
+ justify-content: center;
+ align-items: center;
+ @include media-breakpoint-down(sm){
+  padding:2rem;
+  padding-top: 50px;
+ }
+ &--circle {
+  position: absolute;
+  top:0%;
+  left:20%;
+  img {
+   width:100%;
+  }
+  @include media-breakpoint-down(lg){
+   left:10%;
+  }
+  @include media-breakpoint-only(md) {
+   left:0%
+   }
+   @include media-breakpoint-down(sm) {
+   width:10rem;
+   left:0%;
+   top:5%;
+   }
+  }
+ }
+}

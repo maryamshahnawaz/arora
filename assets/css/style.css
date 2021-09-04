@@ -11448,7 +11448,7 @@ header nav ul li {
   header nav ul li {
     border-bottom: 1px solid #e9ecef;
     font-weight: bold;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
   }
 }
 header nav ul li a {
@@ -11484,7 +11484,7 @@ header nav ul .logo {
   header nav ul .logo {
     position: absolute;
     top: 0;
-    left: 40%;
+    left: 35%;
     font-size: 3rem;
     border-bottom: 1px solid #e9ecef;
     display: block;
@@ -11580,6 +11580,57 @@ header nav .menu-btn.open .menu-btn__burger::before {
 }
 header nav .menu-btn.open .menu-btn__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.branding {
+  background-color: #C3DAB7;
+  min-height: 100vh;
+  width: 100%;
+  padding: 10rem 0 0 0;
+}
+@media (max-width: 575.98px) {
+  .branding {
+    padding: 2rem 0 0 0;
+  }
+}
+.branding__images {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .branding__images {
+    padding: 2rem;
+    padding-top: 50px;
+  }
+}
+.branding__images--circle {
+  position: absolute;
+  top: 0%;
+  left: 20%;
+}
+.branding__images--circle img {
+  width: 100%;
+}
+@media (max-width: 991.98px) {
+  .branding__images--circle {
+    left: 10%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .branding__images--circle {
+    left: 0%;
+  }
+}
+@media (max-width: 575.98px) {
+  .branding__images--circle {
+    width: 10rem;
+    left: 0%;
+    top: 5%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

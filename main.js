@@ -14,9 +14,11 @@ menuBtn.addEventListener('click', () => {
  }
 });
 
-window.addEventListener('DOMContentLoaded', () => {
- if ($(window).width() > 600) {
-
+window.addEventListener('resize', () => {
+ if (window.innerWidth <= 550) {
+  ulBtn.classList.add('show');
+ } else {
+  ulBtn.classList.remove('show');
  }
 });
 
