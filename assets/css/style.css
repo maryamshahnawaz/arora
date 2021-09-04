@@ -11627,9 +11627,23 @@ header nav .menu-btn.open .menu-btn__burger::after {
 }
 @media (max-width: 575.98px) {
   .branding__images--circle {
-    width: 10rem;
+    width: 12rem;
     left: 0%;
     top: 5%;
+  }
+}
+.branding__name {
+  padding-top: 5rem;
+}
+@media (max-width: 575.98px) {
+  .branding__name h1 {
+    font-weight: bold;
+  }
+}
+@media (max-width: 575.98px) {
+  .branding__name p {
+    padding: 1rem;
+    font-size: 1.6rem;
   }
 }
 
