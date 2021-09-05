@@ -61,14 +61,14 @@
 
 // services section
 .services {
- padding: 10rem 5rem 10rem 0;
+ padding: 10rem 5rem 10rem 5rem;
  background-image: url('../../assets/images/home-4.jpeg');
  background-repeat: no-repeat;
  background-size: cover;
  background-position:center;
  
   @include media-breakpoint-down(sm){
-   padding-left: 5rem;
+   padding: 3rem 1rem;
   }
 
  &__icon {
@@ -118,6 +118,7 @@
  &__image {
   max-width:100%;
   max-height:100%;
+  
   img{
    width:100%;
    height:100%;
@@ -129,15 +130,23 @@
 // portfolio section
 
 .portfolio {
- height:100vh;
+   height: auto;
   &__view {
    display:flex;
    background:$primary;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding:6rem;
+   padding:3rem 6rem;
    text-align: center;
+   @include media-breakpoint-down(sm){
+       padding:3rem;
+   }
+ 
+   p {
+      color:$gray-600;
+      padding: 2rem 0;
+   }
   button{
    padding:1rem 2rem;
    outline: none;
@@ -145,4 +154,13 @@
    }
 }
 
+&__image {
+   height:auto;
+   img {
+      height:100%;
+      object-fit: cover;
+   }
 }
+
+}
+

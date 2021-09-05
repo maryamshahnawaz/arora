@@ -2,5 +2,116 @@
 .footer {
  background:$light-black;
  padding:9rem 0;
+ @include media-breakpoint-down(md){
+   padding:4rem 0 2rem 0;
+  }
  color:$white;
+ &__main-section {
+  padding-bottom: 6rem;
+  @include media-breakpoint-down(sm){
+   text-align: center;
+  }
+
+
+  &--base{
+   @include media-breakpoint-down(sm){
+    margin-bottom: 3rem;
+   }
+   &--last {
+  text-align: right;
+  @include media-breakpoint-down(sm){
+   text-align: center;
+  }
+ }
+  }
+
+  &--heading {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+  @include media-breakpoint-down(sm){
+   padding-bottom: 1rem;
+  }
+  &__middle{
+   text-align: center;
+   @include media-breakpoint-down(lg){
+   text-align: left;
+   padding-left: 1rem;
+  }
+   @include media-breakpoint-down(sm){
+   text-align: center;
+   padding-left: 1rem;
+  }
+  }
+ }
+ 
+&--social-media {
+  @include media-breakpoint-down(sm){
+    margin-left: 30%;
+   }
+  li {
+   a {
+    i {
+     color:$white;
+     font-size: 2.5rem;
+     padding: 1rem 2rem 1rem 0;
+    }
+   }
+  }
+ }
+
+  &--list {
+  list-style: disc;
+  li {
+   padding:0.30rem 0;
+  }
+ }
+
+ 
+
+ &--middle {
+  text-align: center;
+  @include media-breakpoint-down(sm){
+   text-align: left;
+  }
+ }
+
+
+form {
+  position: relative;
+  margin-top: 2rem;
+  
+
+  input[type="text"]{
+  padding: 1rem 7rem 1rem 1rem;
+  position: absolute;
+  top:0;
+  right:0;
+  @include media-breakpoint-down(sm){
+   left:10%;
+   padding: 1rem 10rem 1rem 1rem;
+  }
+ }
+
+   button {
+   border:none;
+   position: absolute;
+   top:0;
+   right:0%;
+   padding:0.90rem 2rem;
+   background: $primary;
+   @include media-breakpoint-down(sm){
+   right:10%;
+  }
+  }
+ }
+ }
+.copy-right {
+ letter-spacing: 3px;
+  margin-top: 6rem;
+  @include media-breakpoint-down(sm){
+   margin-top: 0;
+  }
+}
 }

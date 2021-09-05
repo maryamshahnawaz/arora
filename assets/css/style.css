@@ -11351,6 +11351,11 @@ html {
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
 }
 
 body {
@@ -11358,6 +11363,7 @@ body {
   font-family: "Open Sans", sans-serif;
   line-height: 2.4rem;
   letter-spacing: 0.3px;
+  overflow-x: hidden;
 }
 
 a {
@@ -11406,6 +11412,120 @@ nav {
   background: #333333;
   padding: 9rem 0;
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  .footer {
+    padding: 4rem 0 2rem 0;
+  }
+}
+.footer__main-section {
+  padding-bottom: 6rem;
+}
+@media (max-width: 575.98px) {
+  .footer__main-section {
+    text-align: center;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer__main-section--base {
+    margin-bottom: 3rem;
+  }
+}
+.footer__main-section--base--last {
+  text-align: right;
+}
+@media (max-width: 575.98px) {
+  .footer__main-section--base--last {
+    text-align: center;
+  }
+}
+.footer__main-section--heading {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+@media (max-width: 575.98px) {
+  .footer__main-section--heading {
+    padding-bottom: 1rem;
+  }
+}
+.footer__main-section--heading__middle {
+  text-align: center;
+}
+@media (max-width: 991.98px) {
+  .footer__main-section--heading__middle {
+    text-align: left;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer__main-section--heading__middle {
+    text-align: center;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .footer__main-section--social-media {
+    margin-left: 30%;
+  }
+}
+.footer__main-section--social-media li a i {
+  color: #fff;
+  font-size: 2.5rem;
+  padding: 1rem 2rem 1rem 0;
+}
+.footer__main-section--list {
+  list-style: disc;
+}
+.footer__main-section--list li {
+  padding: 0.3rem 0;
+}
+.footer__main-section--middle {
+  text-align: center;
+}
+@media (max-width: 575.98px) {
+  .footer__main-section--middle {
+    text-align: left;
+  }
+}
+.footer__main-section form {
+  position: relative;
+  margin-top: 2rem;
+}
+.footer__main-section form input[type=text] {
+  padding: 1rem 7rem 1rem 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 575.98px) {
+  .footer__main-section form input[type=text] {
+    left: 10%;
+    padding: 1rem 10rem 1rem 1rem;
+  }
+}
+.footer__main-section form button {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0%;
+  padding: 0.9rem 2rem;
+  background: #C3DAB7;
+}
+@media (max-width: 575.98px) {
+  .footer__main-section form button {
+    right: 10%;
+  }
+}
+.footer .copy-right {
+  letter-spacing: 3px;
+  margin-top: 6rem;
+}
+@media (max-width: 575.98px) {
+  .footer .copy-right {
+    margin-top: 0;
+  }
 }
 
 header {
@@ -11650,7 +11770,7 @@ header nav .menu-btn.open .menu-btn__burger::after {
 }
 
 .services {
-  padding: 10rem 5rem 10rem 0;
+  padding: 10rem 5rem 10rem 5rem;
   background-image: url("../../assets/images/home-4.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -11658,7 +11778,7 @@ header nav .menu-btn.open .menu-btn__burger::after {
 }
 @media (max-width: 575.98px) {
   .services {
-    padding-left: 5rem;
+    padding: 3rem 1rem;
   }
 }
 .services__icon {
@@ -11710,7 +11830,7 @@ header nav .menu-btn.open .menu-btn__burger::after {
 }
 
 .portfolio {
-  height: 100vh;
+  height: auto;
 }
 .portfolio__view {
   display: flex;
@@ -11718,13 +11838,29 @@ header nav .menu-btn.open .menu-btn__burger::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 3rem 6rem;
   text-align: center;
+}
+@media (max-width: 575.98px) {
+  .portfolio__view {
+    padding: 3rem;
+  }
+}
+.portfolio__view p {
+  color: #6c757d;
+  padding: 2rem 0;
 }
 .portfolio__view button {
   padding: 1rem 2rem;
   outline: none;
   border: none;
+}
+.portfolio__image {
+  height: auto;
+}
+.portfolio__image img {
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousal {
@@ -11732,7 +11868,7 @@ header nav .menu-btn.open .menu-btn__burger::after {
 }
 @media (max-width: 575.98px) {
   .carousal {
-    padding: 2rem 0;
+    padding: 4rem;
   }
 }
 .carousal__image {

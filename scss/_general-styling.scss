@@ -16,10 +16,11 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 html {
  font-size: 62.5%;
+ overflow-x: hidden;
 }
 
 ul {
- // list-style: none;
+ list-style: none;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
  font-family: 'Open Sans', sans-serif;
  line-height: 2.4rem;
  letter-spacing: 0.3px;
+ overflow-x: hidden;
 }
 
 a {
