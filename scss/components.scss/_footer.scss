@@ -1,0 +1,6 @@
+@use "../custom-styling" as *;
+.footer {
+ background:$light-black;
+ padding:9rem 0;
+ color:$white;
+}

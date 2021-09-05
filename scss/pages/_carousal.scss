@@ -1,0 +1,41 @@
+@use "../components.scss/mixins" as *;
+@use "../custom-styling" as *;
+.carousal {
+ padding: 8rem 0;
+
+ @include media-breakpoint-down(sm){
+  padding: 2rem 0;
+ }
+
+ &__image {
+  max-width: 150px;
+  max-height: 150px;
+  margin: 2rem auto;
+  img {
+   height:100%;
+   width:100%;
+   border-radius: 50%;
+   
+  }
+ }
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 25px;
+  color:black;
+  position: absolute;
+  top:30%;
+  left:150%;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 25px;
+  color: black;
+   position: absolute;
+  top:30%;
+  left:-40%;
+}
+}
+
