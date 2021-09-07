@@ -2,6 +2,7 @@
 .footer {
  background:$light-black;
  padding:9rem 0;
+ font-weight: normal;
  @include media-breakpoint-down(md){
    padding:4rem 0 2rem 0;
   }
