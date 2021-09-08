@@ -12452,6 +12452,8 @@ header nav .menu-btn.open .menu-btn__burger::after {
 @media (max-width: 575.98px) {
   .navbar ul .shopping-cart span {
     background-color: #fff;
+    bottom: 30%;
+    right: 4%;
   }
 }
 @media (max-width: 575.98px) {
@@ -12476,7 +12478,7 @@ header nav .menu-btn.open .menu-btn__burger::after {
   .navbar .menu-btn {
     display: block;
     position: absolute;
-    top: 4%;
+    top: 30%;
     left: 4%;
   }
 }
@@ -12518,8 +12520,13 @@ header nav .menu-btn.open .menu-btn__burger::after {
 }
 
 .contact-details {
-  padding: 20rem 0 0 0;
+  padding-top: 20rem;
   text-align: left;
+}
+@media (max-width: 575.98px) {
+  .contact-details {
+    padding-top: 10rem;
+  }
 }
 .contact-details p {
   font-weight: normal;
@@ -12542,6 +12549,7 @@ header nav .menu-btn.open .menu-btn__burger::after {
   .information-section--first, .information-section--second {
     margin-right: 0;
     border-right: none;
+    margin-bottom: 3rem;
   }
 }
 .information-section .fas {

@@ -142,6 +142,8 @@
      line-height: 10px;
      @include media-breakpoint-down(sm){
       background-color: $white;
+      bottom:30%;
+     right:4%;
      }
      }
     }
@@ -169,7 +171,7 @@
     @include media-breakpoint-down(sm){
     display: block;
     position: absolute;
-    top:4%;
+    top:30%;
     left:4%;
     }
    }
@@ -221,8 +223,11 @@
 
 // contact details section
 .contact-details {
-  padding: 20rem 0 0 0;
+  padding-top: 20rem;
   text-align: left;
+  @include media-breakpoint-down(sm){
+padding-top: 10rem;
+  }
 
   p {
     font-weight: normal;
@@ -243,6 +248,7 @@
     @include media-breakpoint-down(sm){
       margin-right:0;
       border-right:none;
+      margin-bottom: 3rem;
     }
   }
   .fas {
