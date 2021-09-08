@@ -1,0 +1,277 @@
+@use "../components.scss/mixins" as *;
+@use "../custom-styling" as *;
+.contact-header {
+ min-height:calc(40vh - 80px);
+ background-image: url("../../assets/images/contact-1.jpeg");
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ @include media-breakpoint-down(lg){
+  min-height:calc(25vh - 80px);
+ }
+
+ @include media-breakpoint-down(md){
+  min-height:calc(30vh - 80px);
+ }
+
+ &--title {
+  position: absolute;
+  top:26%;
+  left:10%;
+   @include media-breakpoint-down(lg){
+  top:15%;
+  left:10%;
+ }
+   
+  @include media-breakpoint-down(lg){
+  top:18%;
+  left:10%;
+ }
+   &--line {
+      width:5rem;
+      height:6px;
+      margin-bottom: 4rem;
+      background-color: black;
+   }
+ }
+ 
+}
+  .navbar {
+   width:100%;
+   height:80px;
+   line-height: 80px;
+   background: $white;
+   @include media-breakpoint-down(sm){
+     width:100%;
+     z-index: 100;
+     padding: 0;
+     margin:0;
+   }
+  
+   .show {
+      display:block;
+   }
+   ul {
+    display:flex;
+    margin:0 auto;
+    justify-content: center;
+    @include media-breakpoint-down(sm){
+     width:100%;
+    //  z-index: 100;
+     padding: 0;
+     margin:0;
+   }
+
+    
+    @include media-breakpoint-down(sm){
+     background:$primary;
+     display:block;
+     text-align: center;
+     padding:0;
+     background:$primary;
+     min-height: 100vh;
+     display:none;
+    }
+
+     
+    
+    li {
+     padding: 0 1rem;
+     @include media-breakpoint-down(lg){
+        padding: 0 .50rem;
+      }
+      @include media-breakpoint-down(sm){
+       border-bottom: 1px solid $gray-200;
+       font-weight: bold;
+       padding: 1.5rem 0;
+       
+      }
+     a {
+      font-size: 1.8rem;
+      color:$black;
+      @include media-breakpoint-down(md){
+       font-size: 1.6rem;
+      }
+     }
+    }
+    .home {
+  @include media-breakpoint-down(sm){
+   padding-top: 80px;
+  }
+    }
+    .logo {
+     font-size: 4rem;
+     padding: 0 25rem;
+     font-weight: bold;
+     @include media-breakpoint-down(lg){
+       padding: 0 7rem;
+      }
+     @include media-breakpoint-down(md){
+       font-size: 2.5rem;
+      }
+      @include media-breakpoint-down(sm){
+       position: absolute;
+       top:0;
+       left:35%;
+       font-size: 3rem;
+       border-bottom: 1px solid $gray-200;
+       display:block;
+       font-weight: bold;
+       padding: 0;
+
+       
+      }
+    }
+    .shopping-cart{
+     position: relative;
+     @include media-breakpoint-down(sm){
+      position: absolute;
+      top:0;
+      right:3%;
+      border-bottom: none;
+     }
+     span{
+     position: absolute;
+     bottom:20%;
+     right:4%;
+     background-color: $primary;
+     padding:5px;
+     border-radius: 50%;
+     width:20px;
+     height:20px;
+     line-height: 10px;
+     @include media-breakpoint-down(sm){
+      background-color: $white;
+     }
+     }
+    }
+    
+  .search-icon {
+   @include media-breakpoint-down(sm){
+    position: absolute;
+    top:1%;
+    right: 10%;
+     border-bottom: none;
+   }
+  }
+   }
+
+   // burger menu
+   .menu-btn{
+    position: relative;
+    width:80px;
+    height:80px;
+    transition: all 0.5s ease-in-out;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    @include media-breakpoint-down(sm){
+    display: block;
+    position: absolute;
+    top:4%;
+    left:4%;
+    }
+   }
+
+    .menu-btn__burger {
+       width:50px;
+       height:6px;
+       background:$white;
+       border-radius: 5px;
+       box-shadow:0.2px 5px rgba(255,101,47,.2);
+       transition: all 0.5s ease-in-out;
+     }
+
+    .menu-btn__burger::before,
+    .menu-btn__burger::after {
+        content:"";
+        position: absolute;
+        width:50px;
+         height:6px;
+         background:$white;
+        border-radius: 5px;
+        box-shadow:0 2px 5px rgba(255,101,47,.2);
+        transition: all 0.5s ease-in-out;
+       }
+
+       .menu-btn__burger::before {
+        transform: translateY(-16px);
+       }
+
+     .menu-btn__burger::after{
+             transform: translateY(16px);
+     }
+  
+ 
+.menu-btn.open .menu-btn__burger {
+ transform:translateX(-50px);
+ background:transparent;
+ box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before{
+ transform:rotate(45deg) translate(35px, -35px);
+}
+.menu-btn.open .menu-btn__burger::after{
+ transform:rotate(-45deg) translate(35px, 35px);
+}
+
+}
+
+// contact details section
+.contact-details {
+  padding: 20rem 0 0 0;
+  text-align: left;
+
+  p {
+    font-weight: normal;
+    color:$gray-500;
+  }
+}
+
+// information-section
+.information-section {
+  padding: 10rem 0;
+  @include media-breakpoint-down(sm){
+    text-align: center;
+  }
+  &--first,
+  &--second {
+    border-right: 1px solid $gray-300;
+    margin-right: 3rem;
+    @include media-breakpoint-down(sm){
+      margin-right:0;
+      border-right:none;
+    }
+  }
+  .fas {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .title {
+    color:black;
+  }
+  p {
+    color:$gray-500;
+  }
+}
+
+// get in touch section
+.get-in-touch {
+  padding-bottom: 12rem;
+  text-align: left;
+
+  p {
+    font-weight: normal;
+    color:$gray-500;
+  }
+}
+
+.form-section {
+  form {
+    @include media-breakpoint-down(sm){
+      padding:3rem;
+    }
+  }
+}

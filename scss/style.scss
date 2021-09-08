@@ -6,12 +6,11 @@
 @use "./components.scss/footer";
 @use "./components.scss/typography";
 @use "./components.scss/mixins";
-@use "./components.scss/navbar";
 
 
 // import pages 
-@use "./pages/home";
 @use "./pages/blog";
+@use "./pages/home";
 @use "./pages/portfolio";
 @use "./pages/contact";
 @use "./pages/carousal";

@@ -3,7 +3,7 @@
 // header section
 header{
  min-height: 100vh;
- background-image: url(../../assets/images/home-1.jpeg);
+ background-image: url("../../assets/images/home-1.jpeg");
  background-position: center center;
  background-repeat: no-repeat;
  background-size: cover;
@@ -58,7 +58,7 @@ header{
     }
     .logo {
      font-size: 4rem;
-     padding: 0 15rem;
+     padding: 0 21rem;
      font-weight: bold;
      @include media-breakpoint-down(lg){
        padding: 0 7rem;
